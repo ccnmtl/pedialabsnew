@@ -1,4 +1,6 @@
-Pedialabs  [![Build Status](https://travis-ci.org/ccnmtl/pedialabsnew.svg?branch=master)](https://travis-ci.org/ccnmtl/pedialabsnew)
+[![Actions Status](https://github.com/ccnmtl/pedialabsnew/workflows/build-and-test/badge.svg)](https://github.com/ccnmtl/pedialabsnew/actions)
+
+Pedialabs
 ==========
 
 
