@@ -47,7 +47,7 @@ pylint==2.7.0
 six==1.15.0
 ipaddress==1.0.23
 factory_boy==3.2.0
-Faker==6.5.0
+Faker==6.5.2
 
 
 ldap3==2.9
