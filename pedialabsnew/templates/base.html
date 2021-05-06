@@ -90,17 +90,15 @@
       </div><!-- /.modal-header -->
       <div class="modal-body">
         {% block loginbox %}
-  
-            {% if CAS_BASE %}
-            <form method="get" action="{{ CAS_BASE }}cas/login">
+
+            <form method="get" action="/cas/login">
               {% csrf_token %}
-              <input type="hidden" name="destination" value="https://{{ request.get_host }}/accounts/caslogin/?next={{ request.get_full_path|urlencode }}" />
+              <input type="hidden" name="next" value="{{next}}" />
               <input class="btn btn-primary btn-lg btn-block" type="submit" value="Columbia University Network ID (UNI)" />
             </form>
-            {% endif %}<!-- CAS -->
-            
+
             <p style="text-align: center;">or</p>
-                        
+
             <form id="login-local" name="login_local" method="post" action="/accounts/login/" class="form-horizontal" role="form">
               {% csrf_token %}
               <div class="login-local-form" {% if not login_form.errors %}style="display: none"{% endif %}>
