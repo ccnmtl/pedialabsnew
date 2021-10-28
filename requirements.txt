@@ -47,7 +47,7 @@ editdistance==0.6.0
 pylint==2.11.1
 six==1.16.0
 ipaddress==1.0.23
-factory_boy==3.2.0
+factory_boy==3.2.1
 Faker==9.7.1
 
 
