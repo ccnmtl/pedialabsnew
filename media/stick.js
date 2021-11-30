@@ -10,7 +10,6 @@
         var perf = window.performance || window.msPerformance ||
                    window.webkitPerformance || window.mozPerformance;
         if (perf) {
-            // eslint-disable-next-line scanjs-rules/call_setTimeout
             setTimeout(function() {
                 $.post(url,  {
                     'window.performance.timing.navigationStart':
