@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.urls.base import reverse
-from django.utils.encoding import python_2_unicode_compatible, smart_text
+from django.utils.encoding import smart_text
 from pagetree.models import PageBlock
 from pagetree.reports import ReportableInterface, ReportColumnInterface
 
@@ -16,7 +16,6 @@ TEST_CHOICES = (
 )
 
 
-@python_2_unicode_compatible
 class Lab(models.Model):
     description = models.TextField(blank=True)
     assessment = models.BooleanField(default=False)
@@ -223,7 +222,6 @@ class Test(models.Model):
         return F(request, instance=self)
 
 
-@python_2_unicode_compatible
 class TestResponse(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -241,7 +239,6 @@ class TestResponse(models.Model):
         return self.abnormality == self.test.abnormality
 
 
-@python_2_unicode_compatible
 class ActionPlanResponse(models.Model):
     lab = models.ForeignKey(Lab, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
