@@ -17,6 +17,7 @@ USE_TZ = True
 TEMPLATES[0]['OPTIONS']['context_processors'].append(  # noqa
     'pedialabsnew.main.views.context_processor'
 )
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 INSTALLED_APPS += [  # noqa
     'bootstrap3',
