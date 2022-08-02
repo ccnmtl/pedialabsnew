@@ -88,7 +88,7 @@ class ViewPage(LoggedInMixin, PageView):
                 'label': section.label,
                 'depth': section.depth,
                 'slug': section.slug,
-                'disabled': not(previous_unlocked or section.id in visit_ids)
+                'disabled': not (previous_unlocked or section.id in visit_ids)
             }
             if section.depth == 3 and section.get_children():
                 item['toggle'] = True
