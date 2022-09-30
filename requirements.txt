@@ -32,7 +32,7 @@ fixtures==4.0.0
 testtools==2.5.0
 testscenarios==0.5.0
 python-subunit==1.4.0
-coverage==6.4
+coverage==6.5.0
 
 chardet==5.0.0
 idna==3.4
