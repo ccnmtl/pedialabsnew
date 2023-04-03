@@ -65,7 +65,7 @@ contextlib2==21.6.0
 rjsmin==1.2.0
 rcssmin==1.1.0
 
-django-bootstrap3==22.2
+django-bootstrap3==23.1
 requirements/src/sorl-3.2ctl-py2.py3-none-any.whl
 django-indexer==0.3.0
 django-templatetag-sugar==1.0
