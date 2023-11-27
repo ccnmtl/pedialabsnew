@@ -35,7 +35,7 @@ python-subunit==1.4.0
 coverage==7.3.0
 
 chardet==5.2.0
-idna==3.4
+idna==3.6
 certifi==2023.11.17  # sentry-sdk
 urllib3==2.1.0
 
