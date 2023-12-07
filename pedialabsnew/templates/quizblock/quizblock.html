@@ -1,6 +1,7 @@
-{% load markup %}
 {% load getresponse %}
-{{ block.description|markdown }}
+{% load markdown %}
+
+{{ block.description|markdownify|safe }}
 
 {% for question in block.question_set.all %}
   {% include 'quizblock/question.html' %}

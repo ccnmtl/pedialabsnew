@@ -1,15 +1,16 @@
-{% load markup %}
-{{ block.description|markdown }}
+{% load markdown %}
+
+{{ block.description|markdownify|safe }}
 
 {% for question in block.question_set.all %}
 <div class="cases">
-     {{question.intro_text|markdown}}
+     {{question.intro_text|markdownify|safe}}
 
      <div class="casetitle"> Question {{question.ordinality}}:</div>
      
      <div class="casecontent">
            <div class="casequestion">
-                 {{question.text|markdown}}
+                 {{question.text|markdownify|safe}}
 		 {% if block.rhetorical %}
                  <form id="form-{{question.id}}" method="post">
 		 {% endif %}
@@ -33,7 +34,7 @@
                  <div id="q{{question.id}}" class="toggleable">
                  <p>{% if question.correct_answer_letter %}<i>The
                  correct answer is
-                 {{question.correct_answer_letter}}:</i>{% endif %} {{question.explanation|markdown}}</p>
+                 {{question.correct_answer_letter}}:</i>{% endif %} {{question.explanation|markdownify|safe}}</p>
                  </div>
            </div>
 	   {% endif %}
