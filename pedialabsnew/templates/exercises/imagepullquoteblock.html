@@ -1,5 +1,5 @@
-{% load markup %}
+{% load markdown %}
 <div class="pullquote">
 <img alt="{{block.alt}}" src="{{MEDIA_URL}}{{block.image.name}}" style="width: 100px; height: auto;"/>
-{{block.caption|markdown}}</div>
+{{block.caption|markdownify|safe}}</div>
 </div>

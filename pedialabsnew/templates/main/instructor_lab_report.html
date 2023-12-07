@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load markdown %}
 
 {% block title %}
 Instructor Report {{module.label}}
@@ -10,7 +11,6 @@ Instructor Report {{module.label}}
 
 {% block second-column %}col-md-10{% endblock %}
 
-{% load markup %}
 {% load getlabresponse %}
 
 {% block content %}
@@ -50,7 +50,7 @@ Lab: {{module.label}}</h4>
 <hr />
 <h3>Report for {{lab_section.label}}</h3>
 
-{{lab_block.description|markdown}}
+{{lab_block.description|markdownify|safe}}
 
 {% if taken %}
 <table cellpadding="0" cellspacing="0" class="labtests labtest-report">

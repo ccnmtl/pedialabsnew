@@ -1,2 +1,3 @@
-{% load markup %}
-{{block.body|markdown}}
+{% load markdown %}
+
+{{block.body|markdownify|safe}}

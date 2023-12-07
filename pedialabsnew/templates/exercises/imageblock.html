@@ -1,6 +1,5 @@
-{% load markup %}
-
+{% load markdown %}
 <img alt="{{block.alt}}" src="{{MEDIA_URL}}{{block.image.name}}" />
 <div class="caption">
-{{block.caption|markdown}}
+{{block.caption|markdownify|safe}}
 </div>
