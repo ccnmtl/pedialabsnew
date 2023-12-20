@@ -31,6 +31,7 @@ INSTALLED_APPS += [  # noqa
     'pedialabsnew.main',
     'pedialabsnew.exercises',
     'pedialabsnew.rstplot',
+    'django_markwhat',
 ]
 
 PAGEBLOCKS = [
