@@ -22,7 +22,7 @@ configparser==6.0.0
 importlib-metadata<7.1 # for flake8
 typing_extensions==4.9.0
 zipp==3.17.0  # for flake8
-flake8==6.1.0
+flake8==7.0.0
 cssselect==1.2.0
 fuzzywuzzy==0.18.0
 sure==2.0.0
