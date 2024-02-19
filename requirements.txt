@@ -37,7 +37,7 @@ coverage==7.4.0
 chardet==5.2.0
 idna==3.6
 certifi==2024.2.2  # sentry-sdk
-urllib3==2.1.0
+urllib3==2.2.1
 
 requests==2.31.0
 logilab-common==2.0.0
