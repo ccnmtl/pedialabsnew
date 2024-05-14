@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.urls.base import reverse
-from django.utils.encoding import smart_text
+from django.utils.encoding import smart_str
 from pagetree.models import PageBlock
 from pagetree.reports import ReportableInterface, ReportColumnInterface
 
@@ -89,7 +89,7 @@ class Lab(models.Model):
         return self.pageblocks.all()[0]
 
     def __str__(self):
-        return smart_text(self.pageblock())
+        return smart_str(self.pageblock())
 
     def edit_form(self):
         action_plan_choices = [
@@ -230,7 +230,7 @@ class TestResponse(models.Model):
 
     def __str__(self):
         return "TestResponse (%s, %s)" % (
-            smart_text(self.test), smart_text(self.user))
+            smart_str(self.test), smart_str(self.user))
 
     def correct_level(self):
         return self.result_level == self.test.result_level
@@ -246,7 +246,7 @@ class ActionPlanResponse(models.Model):
     assessment = models.TextField(default="", blank=True)
 
     def __str__(self):
-        return "ActionPlanResponse for %s" % smart_text(self.user)
+        return "ActionPlanResponse for %s" % smart_str(self.user)
 
     def correct_action_plan(self):
         return self.action_plan == self.lab.correct_actionplan

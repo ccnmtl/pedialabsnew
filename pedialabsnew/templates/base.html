@@ -184,11 +184,11 @@
       {% block sidenav %}{% endblock %}
       </div>
       <div class="{% block second-column %}col-md-9{% endblock %}">
-      {% ifnotequal section.id module.id %}
+      {% if section.id != module.id %}
       {% block parent-module %}
       <h2 class="parent-module">{{module.label}}</h2>
       {% endblock %}
-      {% endifnotequal %}
+      {% endif %}
       {% block pagetitle %}{% endblock %}
       {% block content %}{% endblock %}
       {% block content-nav %}{% endblock %}

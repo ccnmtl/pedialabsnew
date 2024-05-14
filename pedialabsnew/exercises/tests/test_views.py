@@ -12,15 +12,15 @@ class ViewsTest(TestCase):
         lab = Lab.objects.create()
         t = Test.objects.create(lab=lab)
         r = self.c.get("/exercises/delete_test/%d/" % t.id)
-        self.assertEquals(r.status_code, 200)
+        self.assertEqual(r.status_code, 200)
         self.assertContains(r, "<form")
 
     def test_delete_test_post(self):
         lab = Lab.objects.create()
         t = Test.objects.create(lab=lab)
         r = self.c.post("/exercises/delete_test/%d/" % t.id, dict())
-        self.assertEquals(r.status_code, 302)
-        self.assertEquals(Test.objects.all().count(), 0)
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(Test.objects.all().count(), 0)
 
     def test_reorder_tests(self):
         lab = Lab.objects.create()
@@ -32,5 +32,5 @@ class ViewsTest(TestCase):
                 "test_1": t2.id,
                 "test_2": t1.id,
             })
-        self.assertEquals(r.status_code, 200)
-        self.assertEquals(r.content, b"ok")
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.content, b"ok")

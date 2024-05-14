@@ -1,5 +1,5 @@
 {% load accessible %}
-{% load markdown %}
+{% load markdownify %}
 {% load getlabresponse %}
 {% if block.label %}<h3>{{block.label}}</h3>{% endif %}
 
@@ -52,11 +52,11 @@
       {{tr.abnormality|capfirst}}
     </td>
     <td class="expert">
-      {% ifnotequal test.abnormality 'none' %}
+      {% if test.abnormality != 'none' %}
         {{test.abnormality|capfirst}}
       {% else %}
         No abnormality
-      {% endifnotequal %}
+      {% endif %}
     </td>
   </tr>
 {% endfor %}
@@ -140,11 +140,11 @@
       <select name="pageblock-{{block.pageblock.id}}-abnormality-{{test.id}}"
 	      id="pageblock-{{block.pageblock.id}}-abnormality-{{test.id}}" class="form-control">
       {% for abnormality in block.all_abnormalities %}
-        {% ifequal abnormality "unselected" %}
+        {% if abnormality == "unselected" %}
           <option value="unselected" selected="selected">Please select:</option>
         {% else %}
           <option value="{{ abnormality }}">{{abnormality|capfirst}}</option>
-        {% endifequal %}
+        {% endif %}
       {% endfor %}
       </select>
       </div>

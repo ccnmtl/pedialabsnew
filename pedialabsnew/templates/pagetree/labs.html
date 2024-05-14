@@ -4,10 +4,10 @@
 {% block pagetitle %}<h1 class="top-pagetitle">{{section.label}}</h1>{% endblock %}
 
 
-{% block bodyclass %}{% ifequal module.slug 'survey' %}user-survey survey-{% if is_submitted %}complete{% else %}incomplete{% endif %}{% else %}module-labs{% endifequal %}{% endblock %}
+{% block bodyclass %}{% if module.slug == 'survey' %}user-survey survey-{% if is_submitted %}complete{% else %}incomplete{% endif %}{% else %}module-labs{% endif %}{% endblock %}
 
 
-{% block first-column %}{% ifequal module.slug 'survey' %}hide{% else %}{{ block.super }} col-md-labs{% endifequal %}{% endblock %}
+{% block first-column %}{% if module.slug == 'survey' %}hide{% else %}{{ block.super }} col-md-labs{% endif %}{% endblock %}
 
 
 {% block pagemode %}
@@ -36,7 +36,7 @@
 
 {% block content-nav %}  
   
-  {% ifequal module.slug 'survey' %}
+  {% if module.slug == 'survey' %}
     {% if is_submitted %}
     <p class="invitation">Let's begin with the lab exercises for <a href="{{section.get_next.get_absolute_url}}">{{section.get_next.label}} (CBC)</a>.</p>
     {% endif %}
@@ -68,7 +68,7 @@
       {% endwith %}
     {% endif %}
   </ul>
-  {% endifequal %}
+  {% endif %}
 {% endblock %}
 
 {% block js %}

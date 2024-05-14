@@ -37,11 +37,11 @@ Instructor Report
   <td>{{student.username}}</td>
   <td>
 {% for module in all_modules %}
-  {% ifequal module.slug 'survey'%}
+  {% if module.slug == 'survey'%}
   {% else %}
   {% comment %}{% if not forloop.first %}|{% endif %}{% endcomment %}
   <a href="{{student.username}}/lab/{{module.id}}/">{{module.label}}</a>
-  {% endifequal %}
+  {% endif %}
 {% endfor %}
 </td>
 </tr>
