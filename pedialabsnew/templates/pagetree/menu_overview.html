@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="sectionmenu">
       <div class="menu-items">
       {% for s in menu %}
-          <div class="menu-item menu-{{s.depth}}{% if s.toggle %} menu-toplevel{% endif %}{% ifequal s.id section.id %} menu-active{% endifequal %}" data-depth="{{s.depth}}">
+          <div class="menu-item menu-{{s.depth}}{% if s.toggle %} menu-toplevel{% endif %}{% if s.id == section.id %} menu-active{% endif %}" data-depth="{{s.depth}}">
           <a href="{{s.url}}">{{s.label}}</a>
           </div>
       {% endfor %}

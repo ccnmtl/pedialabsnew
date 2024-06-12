@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load markdown %}
+{% load markdownify %}
 
 {% block title %}
 Instructor Report {{module.label}}
@@ -112,11 +112,11 @@ Lab: {{module.label}}</h4>
       {% endif %}
     </td>
     <td class="expert">
-      {% ifnotequal test.abnormality 'none' %}
+      {% if test.abnormality != 'none' %}
         {{test.abnormality|capfirst}}
       {% else %}
         No abnormality
-      {% endifnotequal %}
+      {% endif %}
     </td>
   </tr>
 {% endfor %}

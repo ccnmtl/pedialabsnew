@@ -1,4 +1,4 @@
-{% load markdown %}
+{% load markdownify %}
 <div class="pullquote">
 <img alt="{{block.alt}}" src="{{MEDIA_URL}}{{block.image.name}}" style="width: 100px; height: auto;"/>
 {{block.caption|markdownify|safe}}</div>

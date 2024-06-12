@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.contenttypes.fields import GenericRelation
-from django.utils.encoding import smart_text
+from django.utils.encoding import smart_str
 from django.db import models
 from pagetree.models import PageBlock
 
@@ -16,7 +16,7 @@ class RstPlotBlock(models.Model):
         return self.pageblocks.all()[0]
 
     def __str__(self):
-        return smart_text(self.pageblock())
+        return smart_str(self.pageblock())
 
     def needs_submit(self):
         return False

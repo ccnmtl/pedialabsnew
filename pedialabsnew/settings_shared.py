@@ -31,14 +31,14 @@ INSTALLED_APPS += [  # noqa
     'pedialabsnew.main',
     'pedialabsnew.exercises',
     'pedialabsnew.rstplot',
-    'django_markwhat',
+    'markdownify.apps.MarkdownifyConfig',
 ]
 
 PAGEBLOCKS = [
     'pageblocks.TextBlock',
     'pageblocks.HTMLBlock',
-    'pageblocks.PullQuoteBlock',
     'pageblocks.ImageBlock',
+    'pageblocks.PullQuoteBlock',
     'pageblocks.ImagePullQuoteBlock',
     'quizblock.Quiz',
     'exercises.Lab',
