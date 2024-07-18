@@ -8,5 +8,7 @@ jobs:
           python-version: [3.8]
     steps:
       - uses: actions/checkout@v4
+      - name: run eslint
+        run: make eslint
       - name: Build with Makefile
         run: make
