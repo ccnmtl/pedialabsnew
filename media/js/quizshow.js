@@ -75,6 +75,7 @@ function hideAnswers() {
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 function reveal() {
     if (document.getElementById('inlinedisplay')) {
         var divtag = document.getElementsByTagName('div');
