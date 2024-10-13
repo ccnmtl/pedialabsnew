@@ -20,6 +20,8 @@
   <link href="{{STATIC_URL}}css/main.css" rel="stylesheet">
   <link href="{{STATIC_URL}}css/menu.css" rel="stylesheet">
 
+  {% include "ctlsettings/sentry_js.html" %}
+
   <link rel="shortcut icon" href="{{STATIC_URL}}img/favicon.ico" type="image/x-icon" />
   {% block css %}{% endblock %}
   <script src="{{STATIC_URL}}js/jquery-1.7.2.min.js"></script>
