@@ -36,7 +36,7 @@ coverage==7.9.0
 
 chardet==5.2.0
 idna==3.10
-certifi==2025.4.26  # sentry-sdk
+certifi==2025.6.15  # sentry-sdk
 urllib3==2.4.0
 
 requests==2.32.4
