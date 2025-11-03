@@ -32,6 +32,7 @@ INSTALLED_APPS += [  # noqa
     'pedialabsnew.exercises',
     'pedialabsnew.rstplot',
     'markdownify.apps.MarkdownifyConfig',
+    'debug_toolbar',
 ]
 
 PAGEBLOCKS = [
@@ -51,6 +52,7 @@ MIDDLEWARE += [  # noqa
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 TEMPLATES = [
