@@ -32,7 +32,6 @@ fixtures==4.2.2
 testtools==2.8.0
 testscenarios==0.5.0
 python-subunit==1.4.0
-coverage==7.11.0
 
 chardet==5.2.0
 idna==3.11
