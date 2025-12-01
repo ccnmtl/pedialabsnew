@@ -6,7 +6,7 @@ Markdown==3.10
 simplejson==3.20.1
 smartypants==2.0.1
 uuid==1.30
-psycopg==3.2.1
+psycopg==3.3.0
 olefile==0.47
 
 # for python 3.4
