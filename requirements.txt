@@ -34,7 +34,7 @@ testscenarios==0.6
 python-subunit==1.4.0
 
 chardet==7.4.0.post1
-idna==3.11
+idna==3.12
 certifi==2026.2.25  # sentry-sdk
 urllib3==2.6.3
 
