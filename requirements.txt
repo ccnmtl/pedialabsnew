@@ -3,7 +3,7 @@ asgiref==3.11.0
 lxml==6.1.0
 feedparser==6.0.8
 Markdown==3.10
-simplejson==4.0.1
+simplejson==4.1.0
 smartypants==2.0.1
 uuid==1.30
 psycopg==3.3.0
